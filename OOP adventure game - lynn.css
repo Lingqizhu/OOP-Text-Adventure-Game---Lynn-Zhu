@@ -26,6 +26,7 @@ body{
     align-items: center;
     width: 100vw;
     height: 100vh;
+    font-size: 60px;
 }
 
 h1{
@@ -87,7 +88,7 @@ h1{
 .container{
   width: 100vw;
   height: 100vh;
-  font-size: 40px;
+  font-size: 80px;
   color: black;
   background-repeat: no-repeat;
   background-size: cover;
@@ -151,4 +152,10 @@ h1{
 }
 .btn:hover{
     border-color: rgb(236, 136, 153) ;
+}
+#usertext{
+  font-size: 40px;
+  position: absolute;
+  bottom: 150px;
+
 }

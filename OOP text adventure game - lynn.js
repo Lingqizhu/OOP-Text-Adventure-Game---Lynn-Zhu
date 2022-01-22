@@ -266,23 +266,22 @@ Hall.character = Daisy;
 function dogOption(){
   if(currentRoom.character._weakness==="dog"){
     alert("you win");
-  }else{ alert("you lose");}
-
+  }else{
+    alert("you lose");
+  }
 }
 function chiliOption(){
   if(currentRoom.character._weakness==="chili"){
     alert("you win");
   }else{ alert("you lose");}
-
 }
 function milkOption(){
   if(currentRoom.character._weakness==="milk"){
     alert("you win");
   }else{ alert("you lose");}
-
 }
 function teacherOption(){
   if(currentRoom.character._weakness==="teacher"){
    alert("you win");
-   }else{ alert("you lose");}
+   }else{ alert("you lose"); }
 }
