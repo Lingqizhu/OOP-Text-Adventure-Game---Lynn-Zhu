@@ -171,10 +171,6 @@ class Enemy extends Character {
     }
 
     set weakness(value) {
-      if (value.length < 4) {
-        alert("Decription is too short.");
-        return;
-      }
       this._weakness = value;
     }
  //a method to determine the reult of fighting an enemy
@@ -202,7 +198,7 @@ const Adam = new Enemy("Adam");
 Adam.age = 16;
 Adam.gender = "boy";
 Adam.conversation = "Welcom to the kitchen, fight with me!";
-Adam.weakness = "snake";
+Adam.weakness = "dog";
 const Stephen = new Enemy("Stephen")
 Stephen.age = 16;
 Stephen.gender = "boy";
@@ -231,8 +227,18 @@ Hall.character = Daisy;
     document.getElementById("textarea").innerHTML = textContent;
     document.getElementById("buttonarea").innerHTML = '><input type="text" id="usertext" />';
     document.getElementById("usertext").focus();
+
+    dogButton.addEventListener("click",dogOption);
+    chiliButton.addEventListener("click",chiliOption);
+    milkButton.addEventListener("click",milkOption);
+    teacherButton.addEventListener("click",teacherOption);
+
   }
 
+  const dogButton = document.getElementById("dogButton");
+  const chiliButton = document.getElementById("chiliButton");
+  const milkButton = document.getElementById("milkButton");
+  const teacherButton = document.getElementById("teacherButton");
   //Subroutine to complete inital game set up then handle commands from the user
   function startGame() {
     document.getElementById("userentry").style.display = 'inline-block';
@@ -247,32 +253,36 @@ Hall.character = Daisy;
         if (directions.includes(command.toLowerCase())) {
           currentRoom = currentRoom.move(command)
           displayRoomInfo(currentRoom);
+
         } else {
           document.getElementById("usertext").value = ""
           alert("that is not a valid command please try again")
         }
       }
     });
+
   }
 
-  const optionButtonsElment = document.getElementById("optionButton");
-  optionButtonsElment.addEventListener('click',() => selectOption(Option));
-  function selectOption(option){
-    currentRoom = Hall
-    displayRoomInfo(currentRoom);
-    for (const rb of optionButtonsElment) {
-        if (rb.checked) {
-            if(currentRoom.character.weakness === rb.value){
-              displayRoomInfo(currentRoom);
-            alert("Congratulation you win!");
-            }else{
-              return startGame()
-              alert("Sorry, you lose");
-            /*document.getElementById("header").style.display = "inline-block";
-            document.getElementById("userentry").style.display = 'none';
-            document.getElementById("container").style.display = "none";*/
-            }
-        }
-    }
-  }
+function dogOption(){
+  if(currentRoom.character._weakness==="dog"){
+    alert("you win");
+  }else{ alert("you lose");}
 
+}
+function chiliOption(){
+  if(currentRoom.character._weakness==="chili"){
+    alert("you win");
+  }else{ alert("you lose");}
+
+}
+function milkOption(){
+  if(currentRoom.character._weakness==="milk"){
+    alert("you win");
+  }else{ alert("you lose");}
+
+}
+function teacherOption(){
+  if(currentRoom.character._weakness==="teacher"){
+   alert("you win");
+   }else{ alert("you lose");}
+}
