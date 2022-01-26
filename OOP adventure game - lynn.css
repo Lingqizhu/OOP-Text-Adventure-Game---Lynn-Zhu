@@ -38,9 +38,7 @@ header{
   text-align: center;
 }
 .heart {
-
     margin: auto;
-
     background-color: pink;
     height: 50px;
     width: 50px;
@@ -50,7 +48,6 @@ header{
     animation-iteration-count:infinite;
   }
   .heart:after {
-
     background-color: pink;
     content: "";
     border-radius: 50%;
@@ -61,7 +58,6 @@ header{
     left: 25px;
   }
   .heart:before {
-
     background-color: pink;
     content: "";
     border-radius: 50%;
@@ -86,8 +82,7 @@ header{
     cursor: pointer;
 }
 .container{
-  width: 100vw;
-  height: 100vh;
+  text-align: center;
   font-size: 80px;
   color: black;
   background-repeat: no-repeat;
@@ -101,14 +96,7 @@ header{
   font-size: 80px;
   margin-top: 100px;
 }
-#textarea{
-  text-align: center;
-  color: white;
-  font-size: 60px;
-  margin-top: 10px;
-  background-color: #ffc0cb;
 
-}
 .details{
   position: relative;
 }
@@ -121,26 +109,34 @@ header{
     width: 100px;
     position: absolute;
     bottom: 0;
+    align-self:center;
 }
 #buttonarea{
-    display: grid;
     font-size: 40px;
     gap:30px;
     margin:20px;
     height: 100px;
     width: 100px;
-    position: absolute;
     bottom: 0;
+    text-align: center;
+}
+#textarea{
+  text-align: center;
+  color: white;
+  font-size: 60px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #ffc0cb;
+
 }
 .choicebtn-grid{
-  display: grid;
+    display: grid;
     grid-template-columns: repeat(4,auto);
     gap:30px;
-    margin:20px;
+    margin:40px;
     height: 40px;
+    bottom: 180px;
 
-    position: absolute;
-    bottom: 80px;
 }
 .btn{
     background-color: pink;
@@ -149,13 +145,13 @@ header{
     color: white;
     outline: none;
     font-size: 40px;
+
 }
 .btn:hover{
     border-color: rgb(236, 136, 153) ;
 }
 #usertext{
   font-size: 40px;
-  position: absolute;
-  bottom: 150px;
-
+  margin: 50px;
+  text-align: center;
 }
