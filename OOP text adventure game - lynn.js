@@ -228,10 +228,10 @@ Hall.character = Daisy;
     document.getElementById("buttonarea").innerHTML = '><input type="text" id="usertext" />';
     document.getElementById("usertext").focus();
 
-    dogButton.addEventListener("click",dogOption);
-    chiliButton.addEventListener("click",chiliOption);
-    milkButton.addEventListener("click",milkOption);
-    teacherButton.addEventListener("click",teacherOption);
+    //dogButton.addEventListener("click",dogOption);
+    //chiliButton.addEventListener("click",chiliOption);
+    //milkButton.addEventListener("click",milkOption);
+   // teacherButton.addEventListener("click",teacherOption);
 
   }
 
@@ -263,25 +263,33 @@ Hall.character = Daisy;
 
   }
 
-function dogOption(){
+function dogOption(event){
+  event.preventDefault()
   if(currentRoom.character._weakness==="dog"){
     alert("you win");
   }else{
     alert("you lose");
   }
+  return false;
 }
-function chiliOption(){
+function chiliOption(event){
+  event.preventDefault()
   if(currentRoom.character._weakness==="chili"){
     alert("you win");
   }else{ alert("you lose");}
+  return false;
 }
-function milkOption(){
+function milkOption(event){
+  event.preventDefault()
   if(currentRoom.character._weakness==="milk"){
     alert("you win");
   }else{ alert("you lose");}
+  return false;
 }
-function teacherOption(){
+function teacherOption(event){
+  event.preventDefault()
   if(currentRoom.character._weakness==="teacher"){
    alert("you win");
    }else{ alert("you lose"); }
+   return false;
 }
